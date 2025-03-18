@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <div class="card">
+    <div class="outside">
+      <div class="front">
+        <p>Happy Birthday Mariska</p>
+        <div class="cake">
+          <div class="candle"></div>
+          <div class="top-layer"></div>
+          <div class="middle-layer"></div>
+          <div class="bottom-layer"></div>
+        </div>
+      </div>
+      <div class="back"></div>
+    </div>
+    <div class="inside">
+      <p>Wishing you a very happy birthday filled with love and laughter.</p>
+      <p>Click on gift to see more!</p>
+      <h1 onclick="goToIndex(this)" style="cursor: pointer; transition: transform 0.2s ease, opacity 0.2s ease;">
+        &#127873;</h1>
+
+      <script>
+        function goToIndex(element) {
+          element.style.transform = "scale(1.2)"; // Membesarkan sedikit
+          element.style.opacity = "0.7"; // Mengurangi opacity sedikit
+          setTimeout(() => {
+            location.href = "message.html"; // Pindah halaman setelah efek
+          }, 200); // Tunggu 200ms sebelum berpindah
+        }
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>

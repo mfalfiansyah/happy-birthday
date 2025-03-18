@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mariska 🎂</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script type="module" src="message.js"></script>
+</head>
+
+<body>
+    <h1 id="title">Pilih Lagu</h1>
+    <div class="button-container">
+        <button id="song1" onmouseover="this.innerText='Birthday Girl (Yakin?)'"
+            onmouseout="this.innerText='Birthday Girl'">Birthday Girl</button>
+        <button id="song2" onmouseover="this.innerText='Happy Birthday (Deathcore Ver.)'"
+            onmouseout="this.innerText='Happy Birthday'">Happy Birthday</button>
+    </div>
+
+    <audio id="audio" loop></audio>
+
+    <div class="controls hidden" id="controls">
+        <button class="icon-button" id="mute-button" title="Mute/Unmute Audio">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
+    <!-- Tambahan text-container untuk menampilkan teks -->
+    <div class="typewriter-container" id="typewriter"></div>
+
+    <div class="navigation-buttons hidden">
+        <button id="prev-button" class="nav-button hidden" title="Previous">
+            <i class="fas fa-backward"></i> 
+        </button>
+
+        <button id="next-button" class="nav-button" title="Next">
+            <i class="fas fa-forward"></i>
+        </button>
+    </div>
+</body>
+
+</html>

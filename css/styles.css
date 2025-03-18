@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #690B22;
+    color: #ead6a6;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    flex-direction: column;
+}
+
+h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.button-container {
+    margin-top: 20px;
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    padding: 12px 25px;
+    /* Ukuran lebih fleksibel */
+    font-size: 16px;
+    /* Ukuran lebih kecil untuk HP */
+    cursor: pointer;
+    border: none;
+    background-color: #ead6a6;
+    color: #690B22;
+    border-radius: 30px;
+    text-align: center;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    border: 2px solid #ead6a6;
+}
+
+#song1,
+#song2 {
+    width: 90%;
+    /* Biar tidak terlalu besar di HP */
+    max-width: 250px;
+}
+
+.typewriter {
+    width: 0;
+    overflow: hidden;
+    white-space: pre-wrap;
+    /* Supaya teks tetap turun otomatis */
+    border-right: 2px solid #ead6a6;
+    /* Efek kursor */
+    animation: typing 3s steps(40, end) forwards;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0% {
+        border-color: #ead6a6;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+
+.finished {
+    opacity: 1;
+    display: block;
+    white-space: pre-wrap;
+}
+
+
+.show {
+    opacity: 1;
+    pointer-events: all;
+    display: flex !important;
+}
+
+.controls {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    display: none;
+}
+
+.icon-button {
+    background: none;
+    border: 2px solid #ead6a6;
+    font-size: 14px;
+    padding: 8px 15px;
+    color: #ead6a6;
+    cursor: pointer;
+}
+
+.icon-button:hover,
+.nav-button:hover {
+    color: #690B22;
+    background-color: #ead6a6;
+}
+
+.navigation-buttons {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.nav-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #690B22;
+    color: #ead6a6;
+    border: 2px solid #ead6a6;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+/* 🔹 RESPONSIVE UNTUK HP */
+@media (max-width: 768px) {
+    .navigation-buttons {
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .nav-button {
+        flex: 1;
+        /* Biar ukurannya merata */
+        max-width: 140px;
+        /* Supaya tombol tidak terlalu besar */
+    }
+}
