@@ -27,18 +27,27 @@
       <p>Click on gift to see more!</p>
       <h1 onclick="goToIndex(this)" style="cursor: pointer; transition: transform 0.2s ease, opacity 0.2s ease;">
         &#127873;</h1>
-
-      <script>
-        function goToIndex(element) {
-          element.style.transform = "scale(1.2)"; // Membesarkan sedikit
-          element.style.opacity = "0.7"; // Mengurangi opacity sedikit
-          setTimeout(() => {
-            location.href = "message.html"; // Pindah halaman setelah efek
-          }, 200); // Tunggu 200ms sebelum berpindah
-        }
-      </script>
     </div>
   </div>
+
+  <script>
+    // Script agar kartu bisa dibuka di iPhone dengan klik/tap
+    document.addEventListener("DOMContentLoaded", function () {
+      let card = document.querySelector(".card");
+
+      card.addEventListener("click", function () {
+        this.classList.toggle("opened"); // Toggle class saat diklik
+      });
+    });
+
+    function goToIndex(element) {
+      element.style.transform = "scale(1.2)"; // Membesarkan sedikit
+      element.style.opacity = "0.7"; // Mengurangi opacity sedikit
+      setTimeout(() => {
+        location.href = "message.html"; // Pindah halaman setelah efek
+      }, 200); // Tunggu 200ms sebelum berpindah
+    }
+  </script>
 </body>
 
 </html>

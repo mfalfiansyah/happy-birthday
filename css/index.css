@@ -13,16 +13,6 @@ body {
     min-height: 100vh;
 }
 
-/* .card {
-    width: 90%;
-    max-width: 640px;
-    height: 400px;
-    position: relative;
-    -webkit-perspective: 1200px;
-    perspective: 1200px;
-    transition: 1s;
-} */
-
 .card {
     width: 640px;
     height: 400px;
@@ -31,13 +21,14 @@ body {
     -webkit-perspective: 1200px;
     perspective: 1200px;
     transition: 1s;
+    transform-style: preserve-3d;
 }
 
-.card:hover {
+.card.opened {
     transform: rotate(-5deg);
 }
 
-.card:hover .outside {
+.card.opened .outside {
     transform: rotateY(-130deg);
 }
 

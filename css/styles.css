@@ -41,7 +41,8 @@ h3 {
     width: 100%;
 }
 
-button {
+button,
+.song-button {
     padding: 12px 25px;
     /* Ukuran lebih fleksibel */
     font-size: 16px;
@@ -56,7 +57,8 @@ button {
     font-family: 'Poppins', sans-serif;
 }
 
-button:hover {
+button:hover,
+.song-button:hover {
     border: 2px solid #ead6a6;
 }
 
@@ -87,16 +89,6 @@ button:hover {
     to {
         width: 100%;
         opacity: 1;
-    }
-}
-
-@keyframes blink {
-    0% {
-        border-color: #ead6a6;
-    }
-
-    100% {
-        border-color: transparent;
     }
 }
 
@@ -160,11 +152,131 @@ button:hover {
     gap: 10px;
 }
 
+.container {
+    height: 100vh;
+    width: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    visibility: hidden;
+    position: relative;
+    overflow: hidden;
+}
+
+.baloons img {
+    display: inline-block;
+    position: absolute;
+}
+
+.baloons img:nth-child(even) {
+    left: 0%;
+}
+
+.baloons img:nth-child(odd) {
+    right: 0%;
+}
+
+.baloons img:nth-child(3n + 0) {
+    left: -40%;
+}
+
+.container div.one,
+.container div.two {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+}
+
+.two svg {
+    width: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.two svg:nth-child(1) {
+    top: 7vh;
+    left: 5vw;
+    fill: #bd6ecf;
+}
+
+.two svg:nth-child(2) {
+    top: 23vh;
+    left: 35vw;
+    fill: #7dd175;
+}
+
+.two svg:nth-child(3) {
+    top: 33vh;
+    left: 23vw;
+    fill: #349d8b;
+}
+
+.two svg:nth-child(4) {
+    top: 43vh;
+    left: 57vw;
+    fill: #347a9d;
+}
+
+.two svg:nth-child(5) {
+    top: 68vh;
+    left: 7vw;
+    fill: #c66053;
+}
+
+.two svg:nth-child(6) {
+    top: 42vh;
+    left: 77vw;
+    fill: #bfaa40;
+}
+
+.two svg:nth-child(7) {
+    top: 68vh;
+    left: 83vw;
+    fill: #e3bae8;
+}
+
+.two svg:nth-child(8) {
+    top: 86vh;
+    left: 37vw;
+    fill: #8762cb;
+}
+
+.two svg:nth-child(9) {
+    top: 94vh;
+    left: 87vw;
+    fill: #9a90da;
+}
+
+@keyframes fadeToBlack {
+    from {
+        background-color: #690B22; /* Warna awal (ganti sesuai warna saat ini) */
+    }
+    to {
+        background: url('/img/bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+
+    }
+}
+
+body.blackout {
+    animation: fadeToBlack 3s ease-in-out forwards;
+}
+
+.color-text {
+    color: white;
+}
+
 /* 🔹 RESPONSIVE UNTUK HP */
 @media (max-width: 768px) {
     .navigation-buttons {
         flex-wrap: nowrap;
-        gap: 10px;
+    }
+
+    .container {
+        width: 90%;
     }
 
     .nav-button {
@@ -172,5 +284,16 @@ button:hover {
         /* Biar ukurannya merata */
         max-width: 140px;
         /* Supaya tombol tidak terlalu besar */
+    }
+
+    @keyframes fadeToBlack {
+        from {
+            background-color: #690B22; /* Warna awal (ganti sesuai warna saat ini) */
+        }
+        to {
+            background: url('/img/bg_hp.jpg') no-repeat center center fixed;
+            background-size: cover;
+    
+        }
     }
 }
