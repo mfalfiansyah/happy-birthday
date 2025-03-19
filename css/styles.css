@@ -255,11 +255,7 @@ button:hover,
         background-color: #690B22; /* Warna awal (ganti sesuai warna saat ini) */
     }
     to {
-<<<<<<< HEAD
         background: url('/img/bg_1.png') no-repeat center center fixed;
-=======
-        background: url('img/bg.jpg') no-repeat center center fixed;
->>>>>>> 8b44c7f1c935a8f5db5a5ed4e44bdb7063db11c5
         background-size: cover;
 
     }
@@ -295,11 +291,7 @@ body.blackout {
             background-color: #690B22; /* Warna awal (ganti sesuai warna saat ini) */
         }
         to {
-<<<<<<< HEAD
             background: url('/img/bg_2.png') no-repeat center center fixed;
-=======
-            background: url('img/bg_hp.jpg') no-repeat center center fixed;
->>>>>>> 8b44c7f1c935a8f5db5a5ed4e44bdb7063db11c5
             background-size: cover;
     
         }
