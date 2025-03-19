@@ -255,7 +255,7 @@ button:hover,
         background-color: #690B22; /* Warna awal (ganti sesuai warna saat ini) */
     }
     to {
-        background: url('/img/bg.jpg') no-repeat center center fixed;
+        background: url('img/bg.jpg') no-repeat center center fixed;
         background-size: cover;
 
     }
@@ -291,7 +291,7 @@ body.blackout {
             background-color: #690B22; /* Warna awal (ganti sesuai warna saat ini) */
         }
         to {
-            background: url('/img/bg_hp.jpg') no-repeat center center fixed;
+            background: url('img/bg_hp.jpg') no-repeat center center fixed;
             background-size: cover;
     
         }
