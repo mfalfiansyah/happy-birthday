@@ -69,8 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("cl-animation").classList.add("show");
         document.getElementById("prev-button").classList.remove("show");
         document.getElementById("prev-button").classList.add("hidden");
-        //document.body.classList.add("blackout");
-        //document.querySelector("h3").classList.add("color-text");
+        document.body.classList.add("blackout");
+        document.querySelector("h3").classList.add("color-text");
       }
 
       // Pastikan tombol "Next" hilang saat mencapai teks terakhir
